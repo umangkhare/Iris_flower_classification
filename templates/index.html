@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+
+    <body>
+        <h1>Welcome to IRIS model prediction window</h1>
+        <h3>Enter the values of following: </h2>
+        
+        <form action="{{url_for('predict')}}" method="post">
+            <label for='SepalLength'>SepalLength</label>
+            <input type="text" id="SepalLength" name="SepalLength" value="" />
+            <label for='SepalWidth'>SepalWidth</label>
+            <input type="text" id="SepalWidth" name="SepalWidth" value="" />
+            <label for='PetalLength'>PetalLength</label>
+            <input type="text" id="PetalLength" name="PetalLength" value="" />
+            <label for='PetalWidth'>PetalWidth</label>
+            <input type="text" id="PetalWidth" name="PetalWidth" value="" />
+            <input type="submit" value="Predict">
+        </form>
+
+        {{ prediction_text }}
+
+    </body>
+</html>
